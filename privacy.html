@@ -55,11 +55,11 @@
         </li>
         <li>
           <code>instagram_basic</code> and <code>instagram_content_publish</code>: to read the
-          Instagram account's ID and username, publish its own Reels, and check its recent posts so
-          a Reel is never posted twice.
+          Instagram account's ID and username, publish its own Reels and photos, and check its recent posts so
+          nothing is posted twice.
         </li>
         <li>
-          <code>pages_manage_posts</code>: to publish and schedule the Page's own Reels and check
+          <code>pages_manage_posts</code>: to publish and schedule the Page's own Reels and photos and check
           its recent Reels for the same reason.
         </li>
       </ul>
@@ -148,10 +148,11 @@
         Graph API, Threads API), TikTok (Content Posting API), X (X API) and Pinterest (Pinterest API).
       </p>
       <p>
-        Threads only accepts a video from a public link. For a Threads post, the video is
-        therefore placed briefly on GitHub (a temporary release in the public
-        <code>media-studio-site</code> repository) and deleted as soon as Threads has fetched it.
-        Only the video file is shared this way, never account data.
+        Threads only accepts videos and photos from a public link, and Instagram only accepts
+        photos that way. For those posts, the file is therefore placed briefly on GitHub (a
+        temporary release in the public <code>media-studio-site</code> repository) and deleted as
+        soon as the platform has fetched it. Only the video or photo is shared this way, never
+        account data.
       </p>
       <p>
         The sign-in pages on this site (<code>meta-callback.html</code>,
