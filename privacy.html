@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Privacy Policy – Media Studio</title>
-    <meta name="description" content="How Media Studio, the upload tool for the Blip &amp; Friends YouTube channel, handles Google user data." />
+    <meta name="description" content="How Media Studio, the publishing tool for the Blip &amp; Friends channels, handles data from YouTube, Instagram, Facebook, Threads, TikTok and X." />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -16,16 +16,23 @@
       <h2>Who we are</h2>
       <p>
         Media Studio is a private tool that the operator of the <strong>Blip &amp; Friends</strong>
-        YouTube channel runs on their own computer to publish the channel's own videos. It is not
-        offered to the public and has no user accounts of its own.
+        channels runs on their own computer to publish the channels' own videos to YouTube,
+        Instagram, Facebook, Threads, TikTok and X. It is not offered to the public and has no user
+        accounts of its own.
       </p>
       <p>
-        Data controller: <strong>the private individual who runs the Blip &amp; Friends YouTube channel</strong>, the Netherlands. Contact:
+        Data controller: <strong>the private individual who runs the Blip &amp; Friends channels</strong>, the Netherlands. Contact:
         <a href="mailto:highvibes101.101@gmail.com">highvibes101.101@gmail.com</a>.
       </p>
 
-      <h2>Google user data we access</h2>
-      <p>When the operator connects their YouTube account, Media Studio asks Google for two permissions:</p>
+      <h2>Data we access</h2>
+      <p>
+        Media Studio only signs in to the operator's own accounts, and only with the permissions
+        below. It never accesses viewers' data, comments, followers, messages, analytics, email or
+        contacts.
+      </p>
+
+      <h3>YouTube (Google)</h3>
       <ul>
         <li>
           <strong>Upload YouTube videos</strong> (<code>youtube.upload</code>): to upload the
@@ -34,40 +41,107 @@
         </li>
         <li>
           <strong>View your YouTube account</strong> (<code>youtube.readonly</code>): to look up the
-          connected channel's most recent uploads, so that a video is never uploaded twice after an
+          channel's most recent uploads, so that a video is never uploaded twice after an
           interrupted upload.
         </li>
       </ul>
-      <p>
-        Media Studio does not access viewers' data, comments, subscribers, analytics, email,
-        contacts or any other Google service.
-      </p>
+
+      <h3>Instagram and Facebook (Meta)</h3>
+      <ul>
+        <li>
+          <code>pages_show_list</code>, <code>pages_read_engagement</code> and
+          <code>business_management</code>: to find the Blip &amp; Friends Facebook Page the
+          operator selects, and the Instagram account linked to it.
+        </li>
+        <li>
+          <code>instagram_basic</code> and <code>instagram_content_publish</code>: to read the
+          Instagram account's ID and username, publish its own Reels, and check its recent posts so
+          a Reel is never posted twice.
+        </li>
+        <li>
+          <code>pages_manage_posts</code>: to publish and schedule the Page's own Reels and check
+          its recent Reels for the same reason.
+        </li>
+      </ul>
+
+      <h3>Threads (Meta)</h3>
+      <ul>
+        <li>
+          <code>threads_basic</code> and <code>threads_content_publish</code>: to read the Threads
+          account's ID and username, publish its own posts, and check its recent posts so a post is
+          never published twice.
+        </li>
+      </ul>
+
+      <h3>TikTok</h3>
+      <ul>
+        <li>
+          <code>user.info.basic</code>: the account's open ID, and through the posting API its
+          username, the visibility options it allows and its comment, duet and stitch settings.
+        </li>
+        <li>
+          <code>video.publish</code>: to post the account's own videos and check whether a post
+          finished processing.
+        </li>
+      </ul>
+
+      <h3>X</h3>
+      <ul>
+        <li>
+          <code>users.read</code>: the account's ID and username.
+        </li>
+        <li>
+          <code>tweet.write</code> and <code>media.write</code>: to upload and post the account's
+          own videos.
+        </li>
+        <li>
+          <code>tweet.read</code>: to check the account's recent posts so a video is never posted
+          twice.
+        </li>
+        <li>
+          <code>offline.access</code>: to stay signed in between posts without asking again.
+        </li>
+      </ul>
 
       <h2>How we use it</h2>
       <p>
-        Only to upload and check the channel's own videos, when the operator asks it to. We do not
-        use Google user data for advertising, profiling or analytics, and we do not use it to
-        develop, improve or train artificial-intelligence or machine-learning models.
+        Only to publish and check the channels' own videos, when the operator asks for it or at a
+        time they scheduled. We do not use any of this data for advertising, profiling or
+        analytics, and we do not use it to develop, improve or train artificial-intelligence or
+        machine-learning models.
       </p>
 
       <h2>Where it is stored</h2>
       <ul>
         <li>
-          The Google sign-in (refresh token) and the app's OAuth client are stored only on the
+          Sign-ins (access and refresh tokens) and app credentials are stored only on the
           operator's computer, in the operating system's secure credential store (macOS Keychain or
-          Windows DPAPI). Short-lived access tokens are kept in memory and never written to disk.
+          Windows DPAPI). They are never written to files, logs or source code.
         </li>
         <li>
-          Records of published posts (title, caption, video ID and link) are kept in a local
-          database and in the operator's private source repository.
+          Records of published posts (title, caption, platform post ID and link) are kept in a
+          local database and in the operator's private source repository.
         </li>
         <li>Media Studio has no servers or cloud storage of its own.</li>
       </ul>
 
       <h2>Sharing</h2>
       <p>
-        We do not sell, share, or transfer Google user data to anyone. The only party Media Studio
-        communicates with is Google, through the YouTube Data API.
+        We do not sell or share account data with anyone. Media Studio only communicates with the
+        platform each video is posted to: Google (YouTube Data API), Meta (Instagram and Facebook
+        Graph API, Threads API), TikTok (Content Posting API) and X (X API).
+      </p>
+      <p>
+        Threads only accepts a video from a public link. For a Threads post, the video is
+        therefore placed briefly on GitHub (a temporary release in the public
+        <code>media-studio-site</code> repository) and deleted as soon as Threads has fetched it.
+        Only the video file is shared this way, never account data.
+      </p>
+      <p>
+        The sign-in pages on this site (<code>meta-callback.html</code>,
+        <code>threads-callback.html</code>, <code>tiktok-callback.html</code>) only pass the
+        one-time sign-in code from the platform to Media Studio on the operator's computer. They
+        store nothing and load no third-party scripts.
       </p>
       <p>
         Media Studio's use and transfer to any other app of information received from Google APIs
@@ -78,17 +152,25 @@
 
       <h2>Retention and deletion</h2>
       <p>
-        The sign-in is kept until the operator disconnects YouTube in Media Studio, which revokes it
-        with Google and deletes it from the computer. Access can also be removed at any time at
-        <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
-        Post records are kept as the channel's publishing history and can be deleted on request.
+        A sign-in is kept until the operator disconnects that platform in Media Studio, which
+        deletes it from the computer (for YouTube and X it is also revoked with the platform). Access can also
+        be removed at any time on the platform:
       </p>
+      <ul>
+        <li>Google: <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a></li>
+        <li>Facebook and Instagram: Facebook Settings → Apps and websites</li>
+        <li>Threads: Threads Settings → Account → Website permissions</li>
+        <li>TikTok: TikTok app → Settings and privacy → Security → Apps and services</li>
+        <li>X: Settings → Security and account access → Apps and sessions → Connected apps</li>
+      </ul>
+      <p>Post records are kept as the channels' publishing history and can be deleted on request.</p>
 
       <h2>Children</h2>
       <p>
         The Blip &amp; Friends videos are made for children, but Media Studio does not collect any
-        information from children or other viewers. Viewing happens on YouTube, under YouTube's
-        "made for kids" rules and Google's privacy policy.
+        information from children or other viewers. Viewing happens on each platform, under its
+        own rules and privacy policy. On YouTube, these videos are marked "made for kids"; on
+        TikTok, comments are turned off for them.
       </p>
 
       <h2>Your rights</h2>
