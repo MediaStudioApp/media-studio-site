@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Privacy Policy – Media Studio</title>
-    <meta name="description" content="How Media Studio, the publishing tool for the Blip &amp; Friends channels, handles data from YouTube, Instagram, Facebook, Threads, TikTok and X." />
+    <meta name="description" content="How Media Studio, the publishing tool for the Blip &amp; Friends channels, handles data from YouTube, Instagram, Facebook, Threads, TikTok, X and Pinterest." />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -17,7 +17,7 @@
       <p>
         Media Studio is a private tool that the operator of the <strong>Blip &amp; Friends</strong>
         channels runs on their own computer to publish the channels' own videos to YouTube,
-        Instagram, Facebook, Threads, TikTok and X. It is not offered to the public and has no user
+        Instagram, Facebook, Threads, TikTok, X and Pinterest. It is not offered to the public and has no user
         accounts of its own.
       </p>
       <p>
@@ -103,6 +103,22 @@
         </li>
       </ul>
 
+      <h3>Pinterest</h3>
+      <ul>
+        <li>
+          <code>user_accounts:read</code>: the account's username.
+        </li>
+        <li>
+          <code>boards:read</code>: to find the Blip &amp; Friends board the videos are pinned to.
+        </li>
+        <li>
+          <code>pins:write</code>: to upload the account's own videos and create Pins with them.
+        </li>
+        <li>
+          <code>pins:read</code>: to check the board's recent Pins so a video is never pinned twice.
+        </li>
+      </ul>
+
       <h2>How we use it</h2>
       <p>
         Only to publish and check the channels' own videos, when the operator asks for it or at a
@@ -129,7 +145,7 @@
       <p>
         We do not sell or share account data with anyone. Media Studio only communicates with the
         platform each video is posted to: Google (YouTube Data API), Meta (Instagram and Facebook
-        Graph API, Threads API), TikTok (Content Posting API) and X (X API).
+        Graph API, Threads API), TikTok (Content Posting API), X (X API) and Pinterest (Pinterest API).
       </p>
       <p>
         Threads only accepts a video from a public link. For a Threads post, the video is
@@ -139,7 +155,8 @@
       </p>
       <p>
         The sign-in pages on this site (<code>meta-callback.html</code>,
-        <code>threads-callback.html</code>, <code>tiktok-callback.html</code>) only pass the
+        <code>threads-callback.html</code>, <code>tiktok-callback.html</code>,
+        <code>pinterest-callback.html</code>) only pass the
         one-time sign-in code from the platform to Media Studio on the operator's computer. They
         store nothing and load no third-party scripts.
       </p>
@@ -161,6 +178,7 @@
         <li>Facebook and Instagram: Facebook Settings → Apps and websites</li>
         <li>Threads: Threads Settings → Account → Website permissions</li>
         <li>TikTok: TikTok app → Settings and privacy → Security → Apps and services</li>
+        <li>Pinterest: Settings → Security and logins → Apps (or Claimed accounts → Apps)</li>
         <li>X: Settings → Security and account access → Apps and sessions → Connected apps</li>
       </ul>
       <p>Post records are kept as the channels' publishing history and can be deleted on request.</p>
